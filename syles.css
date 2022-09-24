@@ -1,0 +1,202 @@
+*{
+     padding: 0%;
+     margin: 0%;
+     box-sizing: border-box;
+}
+:root{
+    --linear-1: hsl(293, 100%, 63%);
+    --linear-2: hsl(264, 100%, 61%);
+    --body-color-1:hsl(0, 0%, 100%);
+    --side-color-2:hsl(270, 20%, 96%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+body{
+    background-color: var(--body-color-2);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.side-img{
+    position: absolute;
+    width: 40%;
+    z-index: -2;
+    height: 90vh;
+}
+#side-2{
+    right: -10%;
+    bottom: 0%;
+    border-radius: 49% 49% 0% 0%;
+    background-color: var(--side-color-2)
+}
+#side-1{
+    border-radius: 0 0 49% 49%;
+    left: -10%;
+    top: 0;
+    background-image: linear-gradient(195deg,var(--linear-1), var(--linear-2));
+}
+main{
+    min-height: 100vh;
+    width: 100vw;
+    padding: 7%;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.phone-img{
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#phone-draw{
+    width: 23%;
+    background-color: var(--body-color-1);
+    border-radius: 30px;
+    padding: 1%;
+    box-shadow: 2px 3px 30px hsl(271, 36%, 24%);
+    margin-left: 18%;
+    overflow-x: hidden;
+}
+#heading{
+    background-image: linear-gradient(90deg, var(--linear-2), var(--linear-1));
+    width: 100%;
+    position: relative;
+    border-radius: 10px 10px 3px 3px;
+    padding: 1rem 0.2rem;
+    display: flex;
+    justify-content: flex-start;
+    color: hsl(276, 100%, 81%);
+}
+#steep{
+    background-color: var(--body-color-1);
+    height: 50%;
+    width: 60%;
+    position: absolute;
+    border-radius: 50px;
+    top: -20%;
+    left: 20%;
+}
+#avatar{
+    width:12%;
+    border-radius:50% ;
+    border: solid 1px var(--body-color-1);
+}
+#chat-area{
+    background-color: var(--side-color-2);
+    border-radius: 0 0 20px 20px;
+    font-weight: 300;
+    padding: 5% 1%;
+}
+.left-chat{
+    width: 65%;
+    background-color: hsla(270, 7%, 64%, 0.4);
+    margin: 2%;
+    padding: 3%;
+    color: hsl(276, 55%, 52%);
+    font-size: 12px;
+    border-radius: 10px 5px 10px 5px;
+}
+.right{
+    margin-left: 40%;
+    margin-right: 3%;
+}
+.right-chat-img{
+    display: flex;
+    width:65%;
+    margin-top: 6%;
+}
+.right-chat-img img{
+    width:25%;
+    margin-right: 4%;
+    border-radius: 7px;
+}
+.right-chat{
+    background-color: var(--body-color-1);
+    margin-top: 2%;
+    padding: 3%;
+    border-radius: 10px 10px 5px 10px;
+    color: hsl(271, 15%, 43%);
+    font-size: 12px;
+}
+#small-chat{
+    width: fit-content;
+    margin-left: 57%;
+}
+.again{
+    margin-top: 6%;
+}
+#text-content{
+    width: 43%;
+}
+.radio{
+    background-image: linear-gradient(45deg,var(--linear-1), var(--linear-2));
+    color: var(--body-color-1);
+    display: flex;
+    padding: 4%;
+    justify-content: space-evenly;
+    font-weight: 300;
+    width: 80%;
+}
+.charge{
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 0%;
+}
+#article-header{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: hsl(271, 36%, 24%);
+}
+article{
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(270, 7%, 64%);
+    margin-top: 6%;
+}
+article p{
+    margin-bottom: 1.5%;
+}
+#active-content h1{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+#active-content p{
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+#circle{
+    border-radius: 50%;
+    top: 3%;
+    right: 8.5%;
+}
+@media (max-width:1163px) {
+  #phone-draw{
+    width: clamp(40%, 30%, 50%);
+  }
+  #text-content{
+    margin-left: 10%;
+  }
+}
+@media (max-width:680px) {
+    main{
+        width: 100%;
+    }
+    .phone-img{
+        flex-direction: column;
+        padding: 0%;
+        margin-left: 10%;
+
+    }
+    #phone-draw{
+        width: clamp(70%,80%, 90%);
+        margin-bottom: 10%;
+        margin-right: 15%;
+    }
+    #text-content{
+        width: 100%;
+    }
+    article{
+        padding: 5%;
+    }
+}
